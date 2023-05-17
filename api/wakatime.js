@@ -40,7 +40,7 @@ export default async (req, res) => {
   }
 
   try {
-    const stats = await fetchWakatimeStats({ username, api_domain, range });
+    const stats = await fetchWakatimeStats({ username, api_domain });
 
     let cacheSeconds = clampValue(
       parseInt(cache_seconds || CONSTANTS.FOUR_HOURS, 10),
