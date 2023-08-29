@@ -226,7 +226,7 @@ const fetchStats = async (
   }
 
   const user = res.data.data.user;
-
+  console.log('user', user);
   stats.name = user.name || user.login;
 
   // if include_all_commits, fetch all commits using the REST API.
