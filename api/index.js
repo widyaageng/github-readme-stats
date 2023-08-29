@@ -72,6 +72,8 @@ export default async (req, res) => {
       }, s-maxage=${cacheSeconds}, stale-while-revalidate=${CONSTANTS.ONE_DAY}`,
     );
 
+    console.log('stats', stats);
+
     return res.send(
       renderStatsCard(stats, {
         hide: parseArray(hide),
