@@ -33,6 +33,7 @@ const uptimeFetcher = (variables, token) => {
 };
 
 const getAllPATs = () => {
+  console.log(Object.keys(process.env).filter((key) => /PAT_\d*$/.exec(key)));
   return Object.keys(process.env).filter((key) => /PAT_\d*$/.exec(key));
 };
 
