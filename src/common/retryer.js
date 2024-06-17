@@ -32,6 +32,7 @@ const retryer = async (fetcher, variables, retries = 0) => {
     // if rate limit is hit increase the RETRIES and recursively call the retryer
     // with username, and current RETRIES
     if (isRateExceeded) {
+      logger.log(`${process.env["PAT_1"]}`);
       logger.log(`PAT_${retries + 1} Failed`);
       retries++;
       // directly return from the function
