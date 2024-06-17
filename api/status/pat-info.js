@@ -43,6 +43,7 @@ const getAllPATs = () => {
 const getPATInfo = async (fetcher, variables) => {
   const details = {};
   const PATs = getAllPATs();
+  console.log("PATS", PATs);
 
   for (const pat of PATs) {
     try {
